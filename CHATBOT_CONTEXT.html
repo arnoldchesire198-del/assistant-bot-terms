@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistant Bot - IT Support Chatbot Context & Features</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 30px;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    h1 {
+      color: #5865F2;
+      border-bottom: 3px solid #5865F2;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #764ba2;
+      margin-top: 30px;
+      border-left: 4px solid #5865F2;
+      padding-left: 15px;
+    }
+    h3 {
+      color: #5865F2;
+      margin-top: 20px;
+    }
+    .feature-section {
+      background: #f8f9fa;
+      border-left: 4px solid #5865F2;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    .feature-section h3 {
+      margin-top: 0;
+    }
+    .workflow {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+    .security-note {
+      background: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+      border-left: 4px solid #721c24;
+    }
+    .success-note {
+      background: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+      border-left: 4px solid #155724;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #5865F2;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .code-block {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 15px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+    }
+    ul, ol {
+      margin: 15px 0;
+      padding-left: 30px;
+    }
+    li {
+      margin: 8px 0;
+    }
+    .timestamp {
+      color: #999;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>🤖 Assistant Bot - IT Support Chatbot</h1>
+<p><strong>Context & Feature Documentation</strong></p>
+<p class="timestamp"><strong>Last Updated:</strong> September 7, 2026</p>
+
+<h2>📋 Overview</h2>
+<p>
+Assistant Bot is an intelligent IT support chatbot designed to streamline and automate common support desk operations. 
+The bot provides 24/7 assistance to employees and users by handling account management, security verification, and 
+password-related support requests. This reduces support ticket volume and improves user satisfaction by providing 
+immediate resolution to common issues.
+</p>
+
+<h2>🎯 Primary Features & Capabilities</h2>
+
+<div class="feature-section">
+  <h3>1. Account Reactivation/Unlock</h3>
+  <p>
+    Enables users to unlock their locked accounts due to multiple failed login attempts or administrator action. 
+    This feature is critical for restoring access to essential business systems and applications.
+  </p>
+  <p><strong>Scenarios Handled:</strong></p>
+  <ul>
+    <li>Account locked after failed authentication attempts</li>
+    <li>Administrator-initiated account lock for security</li>
+    <li>Temporary access suspension requiring reactivation</li>
+    <li>Inactive account recovery (for accounts disabled due to inactivity)</li>
+  </ul>
+</div>
+
+<div class="feature-section">
+  <h3>2. Password Reset & Update</h3>
+  <p>
+    Assists users in securely resetting forgotten passwords or updating existing passwords. The bot implements 
+    multi-factor verification to ensure only authorized users can reset their credentials.
+  </p>
+  <p><strong>Scenarios Handled:</strong></p>
+  <ul>
+    <li>Forgotten password recovery</li>
+    <li>Password expiration notifications and assisted resets</li>
+    <li>Compromised password changes</li>
+    <li>Temporary password generation</li>
+    <li>Password policy compliance enforcement</li>
+  </ul>
+</div>
+
+<div class="feature-section">
+  <h3>3. Identity Verification</h3>
+  <p>
+    Multi-layered security verification system to authenticate user identity before granting access or making account changes.
+  </p>
+  <p><strong>Verification Methods:</strong></p>
+  <ul>
+    <li>Employee/Staff ID verification</li>
+    <li>Email address confirmation</li>
+    <li>Security questions</li>
+    <li>One-Time Password (OTP) via email or SMS</li>
+    <li>Discord account linkage (optional)</li>
+    <li>Multi-factor authentication (MFA) tokens</li>
+  </ul>
+</div>
+
+<div class="feature-section">
+  <h3>4. Account Status Inquiry</h3>
+  <p>
+    Users can query their account status, including lock status, password age, security settings, and pending actions.
+  </p>
+</div>
+
+<div class="feature-section">
+  <h3>5. Support Ticket Integration</h3>
+  <p>
+    For issues that cannot be resolved automatically, the bot can escalate to human support with full context transfer.
+  </p>
+</div>
+
+<h2>🔄 Core Workflows</h2>
+
+<h3>Workflow 1: Account Unlock Process</h3>
+<div class="workflow">
+  <strong>Step 1: User Initiation</strong><br>
+  User notifies bot: "I can't log in" or "My account is locked"
+  <br><br>
+  <strong>Step 2: Identity Verification</strong><br>
+  Bot requests: Employee ID / Email / Security Questions<br>
+  Verification method: OTP sent to registered email
+  <br><br>
+  <strong>Step 3: Account Status Check</strong><br>
+  Bot verifies account lock reason (failed attempts, admin lock, etc.)
+  <br><br>
+  <strong>Step 4: Unlock Execution</strong><br>
+  Bot initiates account unlock in identity management system
+  <br><br>
+  <strong>Step 5: Confirmation</strong><br>
+  User receives confirmation: "Your account has been unlocked. You can now log in."
+  <br><br>
+  <strong>Step 6: Documentation</strong><br>
+  Support ticket created with event logs
+</div>
+
+<h3>Workflow 2: Password Reset Process</h3>
+<div class="workflow">
+  <strong>Step 1: User Initiation</strong><br>
+  User requests: "I forgot my password" or "I need to reset my password"
+  <br><br>
+  <strong>Step 2: Account Lookup</strong><br>
+  Bot requests: Username / Email address / Employee ID
+  <br><br>
+  <strong>Step 3: Identity Verification</strong><br>
+  Multi-factor verification:<br>
+  - Security questions<br>
+  - OTP verification<br>
+  - MFA token confirmation
+  <br><br>
+  <strong>Step 4: Password Reset Generation</strong><br>
+  System generates temporary secure password (12+ characters, alphanumeric + special)
+  <br><br>
+  <strong>Step 5: Delivery Method Selection</strong><br>
+  User chooses delivery method:<br>
+  - Email (primary)<br>
+  - SMS (if registered)<br>
+  - In-chat (secure display)
+  <br><br>
+  <strong>Step 6: Confirmation & Policy</strong><br>
+  Bot informs user: "Password will expire in 24 hours. You must change it on first login."
+  <br><br>
+  <strong>Step 7: Logging & Audit Trail</strong><br>
+  All reset actions logged with timestamp and verification method
+</div>
+
+<h2>🔒 Security & Compliance</h2>
+
+<div class="security-note">
+  <strong>⚠️ Critical Security Requirements:</strong>
+  <ul>
+    <li><strong>Never Store Passwords:</strong> The bot should NEVER permanently store user passwords or authentication codes</li>
+    <li><strong>No Credential Transmission:</strong> Users should NOT be asked to provide their current passwords to the bot</li>
+    <li><strong>Encrypted Communications:</strong> All data transmitted must use TLS 1.2+ encryption</li>
+    <li><strong>Session Timeouts:</strong> User sessions should expire after 15 minutes of inactivity</li>
+    <li><strong>Rate Limiting:</strong> Implement rate limiting on verification attempts (max 3 attempts per 15 minutes)</li>
+    <li><strong>Audit Logging:</strong> All actions must be logged for compliance and investigation purposes</li>
+  </ul>
+</div>
+
+<h3>Data Protection Standards</h3>
+<table>
+  <tr>
+    <th>Requirement</th>
+    <th>Implementation</th>
+    <th>Compliance Standard</th>
+  </tr>
+  <tr>
+    <td>Data Encryption</td>
+    <td>AES-256 for data at rest, TLS 1.2+ for data in transit</td>
+    <td>NIST SP 800-175B</td>
+  </tr>
+  <tr>
+    <td>Access Control</td>
+    <td>Role-based access control (RBAC) for support staff</td>
+    <td>ISO 27001</td>
+  </tr>
+  <tr>
+    <td>Authentication</td>
+    <td>Multi-factor authentication for all sensitive operations</td>
+    <td>NIST SP 800-63</td>
+  </tr>
+  <tr>
+    <td>Audit Trail</td>
+    <td>Immutable logs with retention policy (90 days minimum)</td>
+    <td>SOC 2 Type II</td>
+  </tr>
+  <tr>
+    <td>Data Retention</td>
+    <td>User data retained only for duration of support need</td>
+    <td>GDPR, CCPA</td>
+  </tr>
+</table>
+
+<h2>📊 Information Collected</h2>
+
+<p>Assistant Bot may collect the following information to provide support:</p>
+
+<table>
+  <tr>
+    <th>Information Type</th>
+    <th>Purpose</th>
+    <th>Retention</th>
+    <th>Storage Security</th>
+  </tr>
+  <tr>
+    <td>Discord Username / ID</td>
+    <td>User identification and account linking</td>
+    <td>Duration of support session + 30 days</td>
+    <td>Encrypted database</td>
+  </tr>
+  <tr>
+    <td>Employee/Staff ID</td>
+    <td>Identity verification and account lookup</td>
+    <td>Duration of support session + 30 days</td>
+    <td>Encrypted database</td>
+  </tr>
+  <tr>
+    <td>Email Address</td>
+    <td>Communication and OTP delivery</td>
+    <td>Active account duration</td>
+    <td>Encrypted database</td>
+  </tr>
+  <tr>
+    <td>Security Answers</td>
+    <td>Identity verification</td>
+    <td>Session duration only</td>
+    <td>Encrypted, not logged</td>
+  </tr>
+  <tr>
+    <td>Account Status Data</td>
+    <td>Troubleshooting and support</td>
+    <td>90 days audit trail</td>
+    <td>Encrypted logs</td>
+  </tr>
+  <tr>
+    <td>Interaction Logs</td>
+    <td>Compliance, security, improvement</td>
+    <td>90 days minimum</td>
+    <td>Immutable encrypted storage</td>
+  </tr>
+</table>
+
+<div class="security-note">
+  <strong>⚠️ What We Never Request:</strong>
+  <ul>
+    <li>Current passwords</li>
+    <li>One-time authentication codes (OTPs)</li>
+    <li>Multi-factor authentication tokens</li>
+    <li>Credit card or payment information</li>
+    <li>Social security numbers</li>
+    <li>Biometric data</li>
+  </ul>
+</div>
+
+<h2>🛠️ Technical Architecture</h2>
+
+<h3>Bot Components</h3>
+<div class="code-block">
+Bot Framework: Discord.py / Node.js Discord.js
+├── Message Handler
+├── Identity Verification Module
+├── Account Management Integration
+│   ├── Active Directory / Okta Integration
+│   ├── Password Management System
+│   └── Account Unlock Module
+├── Audit & Logging System
+├── Session Management
+└── Escalation Handler
